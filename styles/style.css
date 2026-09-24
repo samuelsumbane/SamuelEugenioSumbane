@@ -1,0 +1,195 @@
+:root {
+  --text-color: darkslategray;
+  --bg-color: aliceblue;
+  --active-anchor: rgb(7, 21, 33);
+  --secondary-background: #84eee8;
+  --project-link: blue;
+  --surface-color: lightgray;
+}
+
+.darkmode {
+  --text-color: #E0E0E0 ;
+  --bg-color: rgb(40, 42, 43);
+  --active-anchor: aliceblue;
+  --secondary-background: #51849f;
+  --project-link: dodgerblue;
+  --surface-color: darkslategray;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  position: fixed;
+  background-color: var(--bg-color);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: sans-serif;
+}
+
+nav {
+  height: 50px;
+  display: flex;
+  justify-content: end;
+}
+
+
+nav ul {
+  display: flex;
+  justify-content: end;
+  margin-top: 10px;
+  margin-right: 10px;
+  z-index: 10;
+  border-radius: 12px;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.1);
+  transition: 0.5s ease-in;
+}
+
+nav ul:hover {
+  box-shadow: 0 0 5px 2px rgba(4, 48, 66, 0.2);
+}
+
+nav ul li {
+  list-style: none;
+  padding:10px 40px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+#active {
+  color: aliceblue;
+}
+
+#active:hover {
+  color: dodgerblue;
+}
+
+nav ul li a:hover {
+  color: dodgerblue;
+  transition: 0.5s;
+}
+
+main {
+  margin: 20px auto;
+  background-color: var(--bg-color);
+  background-image: radial-gradient(circle, var(--secondary-background), var(--bg-color), var(--bg-color));
+  height:calc(100% - 100px);
+  overflow: hidden;
+}
+
+main section {
+  margin: auto;
+  /* background-color: red; */
+  height: 100%;
+  width: 50%;
+  /* min-width: 400px; */
+  max-width: 1300px;
+  padding: 70px;
+  color: var(--text-color);
+  overflow: auto;
+}
+
+ 
+main section h1 {
+  padding: 100px 0px 50px;
+  font-size: 1.5em;
+  font-style: italic;
+  color: rgb(5, 0, 0,);
+}
+
+
+main section h3{
+  padding: 10px 10px 10px 0;
+}
+
+main section div {
+  background-color: rgba(15, 0, 0, 0.1);
+  padding: 10px;
+  border-radius: 12px;
+  margin-top: 40px;
+}
+
+main section div:hover {
+  background-color: var(--surface-color);
+  border-radius: 12px;
+  transition: 0.10s;
+}
+
+
+.project-description {
+  margin: 15px 0px;
+}
+
+main section div p:last-child a{
+  margin: 0 10px;
+  color: var(--project-link);
+  text-decoration: none;
+}
+
+main section ul li {
+  color: var(--text-color);
+  padding: 5px 0;
+}
+
+footer { height: 50px }
+
+footer ul {
+  display: flex;
+  padding-left: 50px;
+  margin-top: 15px;
+}
+
+footer ul li {
+  list-style: none;
+  padding-left: 20px;
+}
+
+
+footer ul li a {
+  background-repeat: no-repeat;
+  background-size: 23px;
+  /* padding: 5px 16px; */
+}
+
+footer ul li a svg {
+  fill: var(--text-color);
+  size: 32px;
+}
+
+#switch-theme {
+  margin: 10px 10px 0 0;
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  background-color: transparent;
+}
+
+#switch-theme svg {
+  fill: var(--text-color);
+}
+ 
+.darkmode #switch-theme svg:last-child {
+  display: block;
+}
+.darkmode #switch-theme svg:first-child {
+  display: none;
+}
+
+#switch-theme svg:first-child {
+  display: block;
+}
+
+#switch-theme svg:last-child {
+  display: none;
+}
+
+

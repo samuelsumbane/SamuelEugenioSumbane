@@ -1,10 +1,12 @@
 :root {
   --text-color: darkslategray;
   --bg-color: aliceblue;
-  --active-anchor: rgb(7, 21, 33);
-  --secondary-background: #84eee8;
+  --active-anchor: #6db1e3;
+  --secondary-background: #b5e9e6;
   --project-link: blue;
   --surface-color: lightgray;
+  --nav-shadow: rgba(0, 0, 0, 0.1);
+  --nav-shadow-hover: rgba(4, 48, 66, 0.2);
 }
 
 .darkmode {
@@ -14,6 +16,8 @@
   --secondary-background: #51849f;
   --project-link: dodgerblue;
   --surface-color: darkslategray;
+  --nav-shadow: rgba(255, 255, 255, 0.1);
+  --nav-shadow-hover: rgba(50, 138, 221, 0.2);
 }
 
 * {
@@ -45,12 +49,12 @@ nav ul {
   margin-right: 10px;
   z-index: 10;
   border-radius: 12px;
-  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 5px 2px var(--nav-shadow);
   transition: 0.5s ease-in;
 }
 
 nav ul:hover {
-  box-shadow: 0 0 5px 2px rgba(4, 48, 66, 0.2);
+  box-shadow: 0 0 5px 2px var(--nav-shadow-hover);
 }
 
 nav ul li {
@@ -65,7 +69,7 @@ nav ul li a {
 }
 
 #active {
-  color: aliceblue;
+  color: var(--active-anchor);
 }
 
 #active:hover {
@@ -89,7 +93,7 @@ main section {
   margin: auto;
   /* background-color: red; */
   height: 100%;
-  width: 50%;
+  width: 70%;
   /* min-width: 400px; */
   max-width: 1300px;
   padding: 70px;
@@ -99,12 +103,15 @@ main section {
 
  
 main section h1 {
-  padding: 100px 0px 50px;
+  padding-top: -10px;
   font-size: 1.5em;
-  font-style: italic;
   color: rgb(5, 0, 0,);
 }
 
+#kotlin_developer {
+  padding: 20px 0px;
+  font-style: italic;
+}
 
 main section h3{
   padding: 10px 10px 10px 0;
@@ -165,7 +172,7 @@ footer ul li a svg {
 }
 
 #switch-theme {
-  margin: 10px 10px 0 0;
+  margin: 5px 10px 0 5px;
   width: 50px;
   height: 50px;
   border: none;

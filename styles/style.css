@@ -13,9 +13,9 @@
   --text-color: #E0E0E0 ;
   --bg-color: rgb(40, 42, 43);
   --active-anchor: aliceblue;
-  --secondary-background: #51849f;
+  --secondary-background:rgba(52, 68, 113, 0.8);
   --project-link: dodgerblue;
-  --surface-color: darkslategray;
+  --surface-color: rgba(46, 51, 63, 0.8);
   --nav-shadow: rgba(255, 255, 255, 0.1);
   --nav-shadow-hover: rgba(50, 138, 221, 0.2);
 }
@@ -121,7 +121,12 @@ main section div {
   background-color: rgba(15, 0, 0, 0.1);
   padding: 10px;
   border-radius: 12px;
-  margin-top: 40px;
+  margin: 20px 0;
+  transition: 0.5s ease-in-out;
+}
+
+main section div:last-child {
+  margin-bottom: 80px;
 }
 
 main section div:hover {
